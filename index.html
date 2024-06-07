@@ -9,6 +9,7 @@
     <h1>My to-do list</h1>
     <input type="text" id="new-item" placeholder="Add a new item" />
     <button onClick="addItem()">Add</button>
+    <button onclick="clearItems()">Clear All</button>
     <ul id="to-do-list">
         <!-- Todo items go here -->
     </ul>
@@ -19,6 +20,10 @@
             const li = document.createElement('li');
             li.textContent = itemText;
             document.getElementById('to-do-list').appendChild(li);
+        }
+        
+        function clearItems(){
+            document.getElementById('to-do-list').innerHTML = '';
         }
     </script>
 </body>
