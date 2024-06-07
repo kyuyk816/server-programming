@@ -7,8 +7,19 @@
 </head>
 <body>
     <h1>My to-do list</h1>
+    <input type="text" id="new-item" placeholder="Add a new item" />
+    <button onClick="addItem()">Add</button>
     <ul id="to-do-list">
-
+        <!-- Todo items go here -->
     </ul>
+
+    <script>
+        function addItem(){
+            const itemText = document.getElementById('new-item').value;
+            const li = document.createElement('li');
+            li.textContent = itemText;
+            document.getElementById('to-do-list').appendChild(li);
+        }
+    </script>
 </body>
 </html>
